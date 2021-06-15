@@ -1,33 +1,30 @@
 package entities;
 
-import entities.enums.TokenType;
-
-public class Token{
+public class Token {
     
-    private TokenType type; 
-    private int value; 
+    public ETokenType type; 
 
-    public Token(){
-    }
+    public Integer attribute; 
 
-    public Token(TokenType type, int value){
+    public Token(ETokenType type, Integer attribute){
         this.type = type;
-        this.value = value; 
+        this.attribute = attribute; 
     }
 
-    public TokenType getType() {
+    public ETokenType getType() {
         return type;
     }
 
-    public void setType(TokenType type) {
+    public void setType(ETokenType type) {
         this.type = type;
     }
 
-    public int getValue() {
-        return value;
+    public Integer getAttribute() {
+        return attribute;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setAttribute(Integer attribute) {
+        this.attribute = attribute;
     }
+
 }

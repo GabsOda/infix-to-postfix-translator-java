@@ -2,22 +2,21 @@ package application;
 
 import java.util.Scanner;
 
-import services.Conversion;
+import services.Convertion;
 
-public class App {
-    public static void main(String[] args) throws Exception {
+public class Program {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);  
          
         System.out.println("----------- Infix to Postfix -----------");
+        
         System.out.print("-> Infix: ");
         String infix = sc.nextLine(); 
 
-        Conversion conversion = new Conversion(infix); 
+        String postfix = Convertion.ConvertionInfixToPostfix(infix);
         
-        System.out.print("=> Postfix: ");
-        conversion.run(); 
+        System.out.println("=> Postfix: " + postfix);
 
-        System.out.println(); 
         System.out.println("----------------------------------------");
         sc.close(); 
     }
